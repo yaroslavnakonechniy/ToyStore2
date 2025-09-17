@@ -1,0 +1,11 @@
+@mixin size-height($font-size, $line-height){
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin border-radius-bg-color($border-radius, $background, $color){
+    border-radius: $border-radius;
+    border: none;
+    background: $background;
+    color: $color;
+}
