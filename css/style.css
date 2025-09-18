@@ -105,9 +105,6 @@ body {
   padding: 9px;
 }
 @media (max-width: 1200px) {
-  .header__contact {
-    background-color: #FFC12C;
-  }
   .header .container {
     max-width: 970px;
   }
@@ -127,8 +124,17 @@ body {
     max-width: none;
   }
 }
+@media (max-width: 480px) {
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+}
 .header__menu {
   background: #FFFFFF;
+  height: 72px;
 }
 .header__menu-body {
   align-items: center;
@@ -205,6 +211,11 @@ body {
     place-items: center;
   }
 }
+@media (max-width: 480px) {
+  .header__contact-body {
+    display: none;
+  }
+}
 .header__contact-social {
   text-align: end;
   margin-right: 15px;
@@ -239,6 +250,11 @@ body {
 }
 .header__menu {
   background: #FFFFFF;
+}
+@media (max-width: 480px) {
+  .header__menu {
+    position: sticky;
+  }
 }
 .header__menu-body {
   align-items: center;
