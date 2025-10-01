@@ -318,10 +318,16 @@
             }    
 	}
 
+      @keyframes move-sttufed-animals {
+            from { transform: translateX(400px); }
+            to   { transform: translateX(0px); }
+      }
+
       &__offer-images-sttufed-animals{
             position: relative;
+            animation: move-sttufed-animals 2s linear 1 alternate;
 
-                &::before{
+            &::before{
                 position: absolute;
                 content: '';
                 top:-60px;
@@ -337,6 +343,8 @@
             }
       }
 
+      
+
       &__offer-body-sttufed-animals{
             @media (max-width: $bp-mobile-xs) {
                   text-align: center;
@@ -351,8 +359,14 @@
             }
       }
 
+      @keyframes move-wooden-animals {
+            from { transform: translateX(-400px); }
+            to   { transform: translateX(0px); }
+      }
+
       &__offer-images-wooden-toys{
             position: relative;
+            animation: move-wooden-animals 2s linear 1 alternate;
 
             &::before{
                   position: absolute;
