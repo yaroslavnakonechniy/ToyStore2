@@ -11,8 +11,19 @@ body{
 }
 
 
-a:hover{
+a {
+    display: inline-block;           /* щоб transform працював коректно */
     cursor: pointer;
+    transition: transform 0.2s ease; /* плавний перехід назад */
+}
+
+a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+button{
+    transition: background 0.6s ease, transform 2.5s ease;
 }
 
 /* наведення */
@@ -20,6 +31,7 @@ button:hover {
   background: $color-bg;
   color:$color-green-light;
   border: 2px solid $color-green-light;
+  
 }
 
 /* натискання */
