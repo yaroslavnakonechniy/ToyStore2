@@ -1,0 +1,34 @@
+
+@import '../fonts/fonts';
+@import '../variables-color/variables-color';
+
+body{
+    font-family: $Varela-Round;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+a:hover{
+    cursor: pointer;
+}
+
+/* наведення */
+button:hover {
+  background: $color-bg;
+  color:$color-green-light;
+  border: 2px solid $color-green-light;
+}
+
+/* натискання */
+button:active {
+  transform: scale(0.96);
+}
+
+/* фокус клавіатури */
+.button:focus {
+  outline: 2px solid $color-bg;
+  outline-offset: 2px;
+}
