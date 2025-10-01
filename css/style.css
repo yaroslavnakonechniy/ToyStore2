@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -79,6 +80,28 @@ body {
   margin: 0 auto;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
+/* наведення */
+button:hover {
+  background: #F8F8F8;
+  color: #A5C926;
+  border: 2px solid #A5C926;
+}
+
+/* натискання */
+button:active {
+  transform: scale(0.96);
+}
+
+/* фокус клавіатури */
+.button:focus {
+  outline: 2px solid #F8F8F8;
+  outline-offset: 2px;
+}
+
 /* header */
 .header__contact {
   background-color: #A5C926;
@@ -155,7 +178,7 @@ body {
   margin: 20px 0 20px 15px;
 }
 @media (max-width: 576px) {
-  .header__nav-list {
+  .header__navigation {
     display: none;
   }
 }
@@ -185,7 +208,7 @@ body {
     left: 0;
   }
 }
-.header__list {
+.header__navigation-list {
   display: grid;
   grid-template: 1fr/1fr 1fr 1fr 1fr;
   font-size: 14px;
@@ -194,9 +217,12 @@ body {
   margin-top: 4px;
   margin-left: 7px;
 }
-.header__list-link {
+.header__navigation-item {
   padding: 20px 0;
   justify-self: start;
+}
+.header__navigation-link {
+  color: #111111;
 }
 .header__menu-buttons {
   margin-right: 15px;
@@ -478,7 +504,7 @@ body {
   font-size: 28px;
   line-height: 36px;
 }
-.main__sttufed-button, .main__wooden-button {
+.main__button-see {
   width: 97px;
   height: 26px;
   background: #FFFFFF;
@@ -486,6 +512,12 @@ body {
   box-shadow: 0 4px 0 #DDDDDD;
   font-size: 13px;
   line-height: 20px;
+}
+.main__button-see:hover {
+  border: 2px solid #DDDDDD;
+  background: #DDDDDD;
+  box-shadow: 0 4px 0 #111111;
+  color: #FFFFFF;
 }
 .main__sttufed-arrow, .main__wooden-arrow {
   position: relative;
@@ -853,22 +885,25 @@ body {
   font-size: 21px;
   line-height: 32px;
 }
-.footer__nav {
+.footer__navigation {
   margin: 0 auto;
 }
-.footer__list {
+.footer__navigation-list {
   display: grid;
   grid-template: 1fr/70px 70px 70px 70px 70px;
   text-align: center;
 }
 @media (max-width: 480px) {
-  .footer__list {
+  .footer__navigation-list {
     grid-template: 70px 70px 70px 70px 70px/1fr;
   }
 }
-.footer__list li {
+.footer__navigation-item {
   font-size: 14px;
   line-height: 24px;
+}
+.footer__navigation-link {
+  color: #FFFFFF;
 }
 .footer__social {
   display: grid;

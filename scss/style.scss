@@ -1,6 +1,6 @@
 
 @import './reset-style/reset-style';
-@import './fonts/fonts';
+
 @import './variables-color/variables-color';
 @import './mixin/mixin';
 @import './service-classes/service-classes';
@@ -87,7 +87,7 @@
             margin: 20px  0 20px 15px;
 	}
 
-      &__nav-list{
+      &__navigation{
             @media (max-width: $bp-small-mobile) {
                   display: none;
             }
@@ -124,7 +124,7 @@
             }
       }
 
-	&__list {
+	&__navigation-list {
             display: grid;
             grid-template: 1fr / 1fr 1fr 1fr 1fr;
             @include size-height(14px, 22px);
@@ -133,9 +133,13 @@
             margin-left: 7px;
 	}
 
-      &__list-link{
+      &__navigation-item{
             padding: 20px 0;
             justify-self: start
+      }
+
+      &__navigation-link{
+            color: $color-dark;
       }
 
 	&__menu-buttons {
@@ -415,13 +419,20 @@
             @include size-height(28px, 36px);
 	}
 
-	&__sttufed-button, &__wooden-button {
+	&__button-see {
             width: 97px;
             height: 26px;
             background: $color-white;
             border: none;
             box-shadow: 0 4px 0 $color-grey-shadow;
             @include size-height(13px, 20px);
+            
+            &:hover{
+                  border: 2px solid $color-grey-shadow;
+                  background: $color-grey-shadow;
+                  box-shadow: 0 4px 0 $color-dark;
+                  color: $color-white;
+            }
 	}
 
       &__sttufed-arrow, &__wooden-arrow {
@@ -811,11 +822,11 @@
             @include size-height(21px, 32px);
 	}
 
-	&__nav {
+	&__navigation {
             margin: 0 auto;
 	}
 
-	&__list {
+	&__navigation-list {
             display: grid;
             grid-template: 1fr / 70px 70px 70px 70px 70px;
             text-align: center;
@@ -825,11 +836,13 @@
             }
 	}
 
-      &__list {
-            li {
-                  @include size-height(14px, 24px);
-            }
+      &__navigation-item{
+            @include size-height(14px, 24px);
 	}
+
+      &__navigation-link{
+            color: $color-white;
+      }
 
 	&__social {
             display: grid;
