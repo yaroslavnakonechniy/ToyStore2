@@ -80,8 +80,19 @@ body {
   margin: 0 auto;
 }
 
+a {
+  display: inline-block; /* щоб transform працював коректно */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* плавний перехід назад */
+}
+
 a:hover {
   cursor: pointer;
+  transform: scale(1.2);
+}
+
+button {
+  transition: background 0.6s ease, transform 2.5s ease;
 }
 
 /* наведення */
@@ -473,7 +484,7 @@ button:active {
   margin-top: 48px;
   margin-bottom: 16px;
 }
-.main__offer-button-wooden-toys, .main__offer-button-sttufed-animals {
+.main__offer-button-shop {
   width: 112px;
   height: 40px;
   border-radius: 20px;
@@ -483,6 +494,7 @@ button:active {
   font-size: 13px;
   line-height: 24px;
   margin: 0 15px;
+  transition: color 0.6s ease, transform 1.5s ease;
 }
 .main__sttufed-container, .main__wooden-container {
   background: #F8F8F8;
@@ -783,9 +795,14 @@ button:active {
 .main__subscribe-buttons-input {
   width: 100%;
   height: 46px;
+  outline: none;
   border: 2px solid #E5E5E5;
   border-radius: 50px;
   background: #F8F8F8;
+}
+.main__subscribe-buttons-input:focus {
+  border: 2px solid #A5C926;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .main__subscribe-buttons-button {
   width: 121px;
@@ -884,6 +901,7 @@ button:active {
 .footer__logo {
   font-size: 21px;
   line-height: 32px;
+  color: #FFFFFF;
 }
 .footer__navigation {
   margin: 0 auto;
