@@ -1,0 +1,113 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+	&__sttufed-container, &__wooden-container {
+            background: $color-bg;
+	}
+
+	&__sttufed, &__wooden {
+            display: grid;
+            grid-template: 70px 1fr/ 1fr;
+	}
+
+	&__sttufed-header, &__wooden-header {
+            display: grid;
+            grid-template:  1fr  1px/ 1fr;
+            padding: 0 10px;
+	}
+
+	&__sttufed-title, &__wooden-title {
+            display: grid;
+            grid-template:  1fr / 3fr 0.3fr 0.1fr;;
+
+	}
+
+	&__sttufed-sabtitle, &__wooden-sabtitle {
+            @include size-height(28px, 36px);
+	}
+
+	&__button-see {
+            width: 97px;
+            height: 26px;
+            background: $color-white;
+            border: none;
+            box-shadow: 0 4px 0 $color-grey-shadow;
+            @include size-height(13px, 20px);
+            
+            &:hover{
+                  border: 2px solid $color-grey-shadow;
+                  background: $color-grey-shadow;
+                  box-shadow: 0 4px 0 $color-dark;
+                  color: $color-white;
+            }
+	}
+
+      &__sttufed-arrow, &__wooden-arrow {
+            position: relative;
+            padding-right: 20px;
+            
+            &::after{
+                  position: absolute;
+                  content: '';
+                  top: 10px;
+                  left: 0;
+                  width: 15px;
+                  height: 15px;
+                  background: url('../assets/icon/arrow-sttufed.svg') center / contain no-repeat;
+            }
+      }
+
+	&__sttufed-line, &__wooden-line {
+            width: 10%;
+            height: 5px;
+            background: $color-green-light;
+	}
+
+	&__sttufed-cards, &__wooden-cards {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            padding: 55px 10px 135px;
+
+            @media  (max-width: $bp-small-laptop){
+                  grid-template: 1fr 1fr / 1fr 1fr;
+            }
+            
+            @media  (max-width: $bp-tablet){
+
+                  grid-template: 1fr 1fr 1fr 1fr /  1fr;
+            }
+	}
+
+	&__sttufed-card, &__wooden-card {
+            width: 100%;
+            height: 328px;
+            display: grid;
+            grid-template: 2fr 1fr 1fr / 1fr;
+            box-shadow: 0 1px 0 $color-grey-shadow;
+            @include border-radius-bg-color(20px, $color-white, 0);
+            border: 2px solid $color-bg;
+            justify-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            @media  (max-width: $bp-small-laptop){
+                  grid-template: 2fr 1fr 1fr / 1fr;
+            }
+	}
+
+	&__sttufed-card-image, &__wooden-card-image {
+            margin: 33px 44px;
+	}
+
+	&__sttufed-card-sabtitle, &__wooden-card-sabtitle {
+            @include size-height(14px, 20px);
+	}
+
+	&__sttufed-card-button, &__wooden-card-button {
+            width: 92px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+            margin-bottom: 34px;
+	}
+}

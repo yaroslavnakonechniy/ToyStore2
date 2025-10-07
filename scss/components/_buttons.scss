@@ -1,0 +1,54 @@
+	&__offer-button-shop {
+            width: 112px;
+            height: 40px;
+            @include border-radius-bg-color(20px, $color-white, $color-dark);
+            @include size-height(13px, 24px);
+            margin: 0 15px;
+            transition: color 0.6s ease, transform 1.5s ease;
+	}
+
+    	&__webflow-button {
+            width: 153px;
+            height: 48px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white );
+            @include size-height(12px, 24px);
+            font-family: $Open-Sans;
+            margin-bottom: 10px;
+	}
+
+
+    &__button-see {
+            width: 97px;
+            height: 26px;
+            background: $color-white;
+            border: none;
+            box-shadow: 0 4px 0 $color-grey-shadow;
+            @include size-height(13px, 20px);
+            
+            &:hover{
+                  border: 2px solid $color-grey-shadow;
+                  background: $color-grey-shadow;
+                  box-shadow: 0 4px 0 $color-dark;
+                  color: $color-white;
+            }
+	}
+
+    &__sttufed-card-button, &__wooden-card-button {
+            width: 92px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+            margin-bottom: 34px;
+	}
+
+    	&__subscribe-buttons-button {
+            width: 121px;
+            height: 47px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+	}
+
+    	&__template-body-button {
+            width: 145px;
+            height: 48px;
+            text-transform: uppercase;
+            @include size-height(12px, 28px);
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+	}

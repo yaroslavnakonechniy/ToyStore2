@@ -1,0 +1,33 @@
+
+@use '../base/variables' as *;
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media  (max-width: $bp-desktop){
+
+            .container{
+                  max-width: $bp-desktop-container;
+            }
+      }
+      @media  (max-width: $bp-small-laptop){
+
+            .container{
+                  max-width: $bp-small-laptop-container;
+            }
+      }
+
+      @media  (max-width: $bp-tablet){
+
+            .container{
+                  max-width: $bp-small-mobile;
+            }
+      }
+
+      @media (max-width: $bp-small-mobile) {
+            .container{
+                  max-width: none;
+            }
+      }

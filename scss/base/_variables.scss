@@ -1,0 +1,27 @@
+
+@use './typography' as *;
+
+$color-green-light-border: #abcf26;
+$color-green-light: #A5C926;
+$color-grey: #999999;
+$color-grey-shadow: #DDDDDD;
+$color-gray-bg-for-input: #F8F8F8;
+$color-gray-border:#E5E5E5;
+$color-dark: #111111;
+$color-white: #FFFFFF;
+$color-orande: #FFC12C;
+$color-pink: #FB416B;
+$color-bg: #F8F8F8;
+$color-grey-dark: #333333;
+
+$bp-mobile-xs: 480px;
+$bp-small-mobile: 576px;
+$bp-tablet: 768px;
+$bp-small-laptop: 992px;
+$bp-desktop: 1200px;
+
+$bp-desktop-container: 970px;
+$bp-small-laptop-container: 750px;
+
+$Varela-Round: 'Varela Round', sans-serif;
+$Open-Sans: 'Open Sans', sans-serif;

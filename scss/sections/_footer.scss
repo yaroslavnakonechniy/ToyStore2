@@ -1,0 +1,110 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.footer {
+      background:$color-green-light;
+      color: $color-white;
+      padding: 48px 0 31px;
+
+	&__body {
+            display: grid;
+            grid-template: 1rf 1fr 1fr / 1fr;
+            padding: 0 10px;
+	}
+
+	&__menu {
+            display: grid;
+            grid-template: 1fr / 92px auto  150px;
+            align-items: center;
+            margin-bottom: 47px;
+
+            @media  (max-width: $bp-tablet){
+                  grid-template: 1fr 1fr 1fr /  1fr ;
+                  gap: 40px;
+                  place-items: center;
+            }
+
+            @media  (max-width: $bp-mobile-xs){
+                  grid-template: 1fr 2fr 1fr /  1fr ;
+            }
+	}
+
+	&__logo {
+            @include size-height(21px, 32px);
+            color: $color-white;
+	}
+
+	&__navigation {
+            margin: 0 auto;
+	}
+
+	&__navigation-list {
+            display: grid;
+            grid-template: 1fr / 70px 70px 70px 70px 70px;
+            text-align: center;
+
+            @media (max-width: $bp-mobile-xs) {
+                  grid-template:  70px 70px 70px 70px 70px / 1fr ;
+            }
+	}
+
+      &__navigation-item{
+            @include size-height(14px, 24px);
+	}
+
+      &__navigation-link{
+            color: $color-white;
+      }
+
+	&__social {
+            display: grid;
+            grid-template: 1fr / auto auto auto auto auto auto;
+            text-align: end;
+
+            @media  (max-width: $bp-tablet){
+                  grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+                  gap: 30px;
+            }
+	}
+
+      &__social-item{
+            img{
+                  @media  (max-width: $bp-tablet){
+                        width: 50px;
+                  }
+
+                  @media (max-width: $bp-mobile-xs) {
+                        width: 20px;
+                  }
+            }
+      }
+
+
+	&__line {
+            width: 100%;
+            height: 2px;
+            background: $color-green-light-border;
+            margin-bottom: 33px;
+	}
+
+	&__copy {
+            display: grid;
+            grid-template: 1fr / auto  auto;
+
+            @media  (max-width: $bp-tablet){
+                  grid-template: 1fr 1fr /  1fr ;
+                  gap: 40px;
+                  place-items: center;
+            }
+	}
+
+	&__copy-left {
+            @include size-height(11px, 16px);
+	}
+
+	&__copy-right {
+            @include size-height(11px, 16px);
+            text-align: end;
+	}
+}

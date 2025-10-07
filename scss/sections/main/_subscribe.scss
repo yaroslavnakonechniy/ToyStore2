@@ -1,0 +1,87 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+	&__subscribe-container {
+            background: $color-bg;
+      }
+
+	&__subscribe {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+            background: $color-white;
+            align-items: center;
+            padding: 47px;
+            border-radius: 20px;
+
+            @media (max-width: $bp-small-mobile) {
+                  grid-template: 1fr 1fr / 1fr;
+                  place-items: center;
+            }
+	}
+
+	&__subscribe-body {
+            display: grid;
+            grid-template: 1fr / 64px 1fr;
+	}
+
+	&__subscribe-body-logo {
+            display: block;
+            width: 64px;
+            height: 64px;
+            background: $color-green-light;
+            margin: 0 auto;
+            position: relative;
+
+            &::after{
+                  position: absolute;
+                  content: '';
+                  top: 17px;
+                  left: 24px;
+                  width: 24px;
+                  height: 24px;
+                  background: url('../assets/icon/play-icon.svg') center / contain no-repeat;
+            }
+	}
+
+	&__subscribe-body-sabtitle {
+            @include size-height(23px, 32px);
+            margin-left: 25px;
+	}
+
+	&__subscribe-body-discount {
+            color: $color-green-light;
+	}
+
+    &__subscribe-buttons{
+            display: grid;
+            grid-template: 1fr / 3fr 1fr;
+            gap: 16px;
+
+            @media  (max-width: $bp-mobile-xs){
+                  grid-template: 1fr  1fr /  1fr;
+                  place-items: center;
+            }
+      }
+
+	&__subscribe-buttons-input {
+            width: 100%;
+            height: 46px;
+            outline: none; 
+            border: 2px solid $color-gray-border;
+            border-radius: 50px;
+            background: $color-gray-bg-for-input;
+
+            &:focus{
+                  border: 2px solid $color-green-light;
+                  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+	}
+
+	&__subscribe-buttons-button {
+            width: 121px;
+            height: 47px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+	}
+}

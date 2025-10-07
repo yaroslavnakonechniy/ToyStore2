@@ -1,15 +1,9 @@
 
-@import '../fonts/fonts';
-@import '../variables-color/variables-color';
+@use './variables' as *;
 
 body{
     font-family: $Varela-Round;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 
 a {
     display: inline-block;           /* щоб transform працював коректно */
@@ -31,7 +25,6 @@ button:hover {
   background: $color-bg;
   color:$color-green-light;
   border: 2px solid $color-green-light;
-  
 }
 
 /* натискання */
