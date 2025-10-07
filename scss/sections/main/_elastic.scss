@@ -1,0 +1,57 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+	&__elastic-container {
+            background: $color-bg;
+	}
+
+	&__elastic {
+            display: grid;
+            grid-template: auto auto auto auto / 1fr;
+            padding: 119px 0;
+            place-items: center;    
+	}
+
+	&__elastic-copy {
+            @include size-height(13px, 16px);
+            font-family: $Open-Sans;
+            color:$color-green-light;
+            margin-bottom: 17px;
+	}
+
+	&__elastic-title {
+            @include size-height(31px, 40px);
+            margin-bottom: 85px;
+	}
+
+	&__elastic-gallery {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            background: $color-white;
+            margin-bottom: 76px;
+            grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+
+            @media (max-width: $bp-desktop){
+                  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+            }
+
+            @media  (max-width: $bp-tablet){
+                  grid-template: 1fr 1fr 1fr /  1fr 1fr;
+            }
+
+            @media (max-width: $bp-mobile-xs) {
+                  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+            }
+	}
+
+	&__elastic-button {
+            width: 173px;
+            height: 48px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white);
+            @include size-height(14px, 24px);
+            font-family: $Open-Sans;
+	}
+}

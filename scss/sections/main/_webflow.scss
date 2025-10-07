@@ -1,0 +1,59 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main {
+        /* webflow-container */
+	&__webflow-container {
+            height: 640px;
+            background: url('../assets/img/webflow/webflow.png') center / contain no-repeat;
+            align-content: center;
+
+            @media (max-width: $bp-mobile-xs){
+                  height: 100%;
+                  margin-top: 20px;
+            }
+	}
+
+	&__webflow {
+            display: grid;
+            place-items: center;
+            grid-template:1fr / 1fr 2fr 1fr;
+
+	}
+
+	&__webflow-card {
+            grid-column: 2;
+            width: 100%;
+            height: 100%;
+            @include border-radius-bg-color(20px, $color-white, $color-dark);
+            text-align: center;
+            
+	}
+
+	&__webflow-sabtitle {
+            @include size-height(13px, 16px);
+            font-family: $Open-Sans;
+            color: $color-green-light;
+            margin: 55px 0 17px;
+	}
+
+	&__webflow-title {
+            @include size-height(39px, 48px);
+            margin-bottom: 20px;
+            text-align: center;
+
+            @media (max-width: $bp-mobile-xs){
+                  @include size-height(20px, 18px);
+            }
+	}
+
+	&__webflow-button {
+            width: 153px;
+            height: 48px;
+            @include border-radius-bg-color(50px, $color-green-light, $color-white );
+            @include size-height(12px, 24px);
+            font-family: $Open-Sans;
+            margin-bottom: 10px;
+	}
+}

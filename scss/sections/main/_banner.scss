@@ -1,0 +1,63 @@
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+	&__banner-container {
+            height: 464px;
+            background: url('../assets/img/banner-about-shop/banner-about-shop.png') center / contain no-repeat;
+            align-content: center
+	}
+
+	&__banner {
+            display: grid;
+            place-items: center;
+	}
+
+	&__banner-card {
+            width: 100%;
+            height: 232px;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+	}
+
+      &__banner-sabtitle{
+            display: block;
+            @include size-height(13px, 16px);
+            color: $color-white;
+            margin-bottom: 17px;
+      }
+
+      &__banner-title{
+            display: block;
+            @include size-height(36px, 44px);
+            color: $color-white;
+            margin-bottom: 18px;
+      }
+
+      &__banner-description{
+            display: block;
+            @include size-height(14x, 24px);
+            color: $color-white;
+            margin-bottom: 26px;
+      }
+
+	&__banner-icon {
+            display: block;
+            width: 64px;
+            height: 64px;
+            background: $color-green-light;
+            margin: 0 auto;
+            position: relative;
+
+            &::after{
+                  position: absolute;
+                  content: '';
+                  top: 17px;
+                  left: 24px;
+                  width: 24px;
+                  height: 24px;
+                  background: url('../assets/icon/play-icon.svg') center / contain no-repeat;
+            }
+	}
+}
