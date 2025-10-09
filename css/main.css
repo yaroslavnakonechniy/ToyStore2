@@ -214,6 +214,7 @@ button:active {
 }
 .header__menu-burger {
   display: none;
+  padding-left: 40px;
 }
 @media (max-width: 576px) {
   .header__menu-burger {
@@ -979,4 +980,45 @@ button:active {
 
 /*
     see _sttufed.scss
-*//*# sourceMappingURL=main.css.map */
+*/
+.burger-active {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.burger-active span {
+  transform: scale(0);
+  transition: 0.5s;
+}
+.burger-active::after {
+  transform: translateY(-12px) rotate(-45deg);
+  transition: 0.5s;
+}
+.burger-active::before {
+  transform: translateY(12px) rotate(45deg);
+  transition: 0.5s;
+}
+
+.display-none {
+  display: none;
+}
+
+.menu-active {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  position: fixed;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.navigation-active {
+  display: grid;
+  place-content: center;
+}
+
+.navigation-list-active {
+  grid-template-columns: 1fr;
+}/*# sourceMappingURL=main.css.map */

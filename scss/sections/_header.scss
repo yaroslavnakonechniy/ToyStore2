@@ -91,6 +91,7 @@
     &__menu-burger{
 
         display: none;
+        padding-left: 40px;
 
         @media (max-width: $bp-small-mobile) {
             display: block;
